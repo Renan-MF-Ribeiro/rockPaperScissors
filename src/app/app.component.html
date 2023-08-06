@@ -6,6 +6,16 @@
     ></app-header>
   </div>
   <div class="game h-full">
-    <app-game class="w-full h-full flex"></app-game>
+    <app-game
+      (select)="weaponSelected = $event"
+      *ngIf="!weaponSelected"
+      class="w-full h-full flex"
+    ></app-game>
+    <app-player
+      (back)="weaponSelected = $event"
+      [weapon]="weaponSelected"
+      *ngIf="weaponSelected"
+      class="w-full h-full flex"
+    ></app-player>
   </div>
 </section>

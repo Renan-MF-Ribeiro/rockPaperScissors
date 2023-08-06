@@ -1,11 +1,29 @@
 <span
- matRipple
-     [matRippleCentered]="true"
-     [matRippleUnbounded]="true"
-  class="rounded-full cursor-pointer relative w-32 flex h-32 justify-center items-center"
+  matRipple
+  [matRippleCentered]="true"
+  [matRippleUnbounded]="true"
+  class="rounded-full cursor-pointer relative w-full flex h-full justify-center items-center"
   [class]="selected"
 >
-  <span class="rounded-full bg-white w-24 flex h-24 p-3">
-    <img class="" [src]="weapon?.img" alt="" />
+  <span
+    *ngIf="selected == 'paper'"
+    class="rounded-full transition-opacity fixed z-10 bg-white w-[85%] flex h-[85%] p-[10%]"
+  >
+    <img class="" src="assets/images/icon-paper.svg" alt="" />
+  </span>
+  <span
+    *ngIf="selected == 'rock'"
+    class="rounded-full transition-opacity fixed z-10 bg-white w-[85%] flex h-[85%] p-[10%]"
+  >
+    <img class="" src="assets/images/icon-rock.svg" alt="" />
+  </span>
+  <span
+    *ngIf="selected == 'scissors'"
+    class="rounded-full transition-opacity fixed z-10 bg-white w-[85%] flex h-[85%] p-[10%]"
+  >
+    <img class="" src="assets/images/icon-scissors.svg" alt="" />
+  </span>
+
+  <span class="rounded-full fixed z-0 bg-[#182343] w-[65%] flex h-[65%]">
   </span>
 </span>

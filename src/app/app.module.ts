@@ -8,6 +8,7 @@ import { GameComponent } from './game/game.component';
 import { WeaponComponent } from './game/weapon/weapon.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRippleModule } from '@angular/material/core';
+import { PlayerComponent } from './player/player.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MatRippleModule } from '@angular/material/core';
     HeaderComponent,
     GameComponent,
     WeaponComponent,
+    PlayerComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, MatRippleModule],
   providers: [],

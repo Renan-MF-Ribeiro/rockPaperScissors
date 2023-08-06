@@ -9,4 +9,6 @@ export class AppComponent {
   title = 'rockPaperScissors';
 
   listNames = ['ROCK', 'PAPER', 'SCISSORS'];
+
+  weaponSelected!: string;
 }

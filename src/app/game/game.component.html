@@ -2,12 +2,18 @@
   <img class="absolute top-64" src="assets/images/bg-triangle.svg" alt="" />
 
   <app-weapon
-    class="relative top-0 right-[30%] md:right-[18%] lg:right-[14%] xl:right-[10%]"
+    (click)="select.emit('paper')"
+    class="relative w-32 h-32 top-0 right-[30%] md:right-[18%] lg:right-[14%] xl:right-[10%]"
     selected="paper"
   ></app-weapon>
   <app-weapon
-    class="relative top-[-33%] lg:left-[14%] md:left-[18%] left-[30%] xl:left-[10%] xl:top-[-36%]"
+    (click)="select.emit('scissors')"
+    class="relative w-32 h-32 top-[-33%] lg:left-[14%] md:left-[18%] left-[30%] xl:left-[10%] xl:top-[-36%]"
     selected="scissors"
   ></app-weapon>
-  <app-weapon class="relative top-[-10%]" selected="rock"></app-weapon>
+  <app-weapon
+    (click)="select.emit('rock')"
+    class="relative w-32 h-32 top-[-10%]"
+    selected="rock"
+  ></app-weapon>
 </div>
