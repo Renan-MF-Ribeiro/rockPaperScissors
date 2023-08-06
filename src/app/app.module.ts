@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRippleModule } from '@angular/material/core';
 import { PlayerComponent } from './player/player.component';
 import { ResultComponent } from './result/result.component';
+import { RulesComponent } from './rules/rules.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ResultComponent } from './result/result.component';
     WeaponComponent,
     PlayerComponent,
     ResultComponent,
+    RulesComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, MatRippleModule],
   providers: [],
