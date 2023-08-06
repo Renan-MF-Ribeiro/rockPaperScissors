@@ -9,6 +9,7 @@ import { WeaponComponent } from './game/weapon/weapon.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRippleModule } from '@angular/material/core';
 import { PlayerComponent } from './player/player.component';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PlayerComponent } from './player/player.component';
     GameComponent,
     WeaponComponent,
     PlayerComponent,
+    ResultComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, MatRippleModule],
   providers: [],
