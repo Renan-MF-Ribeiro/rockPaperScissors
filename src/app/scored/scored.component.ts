@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { GameService } from '../services/game-services.service';
 
 @Component({
   selector: 'app-scored',
@@ -6,11 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./scored.component.scss'],
 })
 export class ScoredComponent implements OnInit {
-  constructor() {}
+  constructor(private _gameService: GameService) {}
 
   ngOnInit(): void {}
 
   get _points() {
-    return 12;
+    const value = this._gameService.getVictories();
+    return value < 10 ? '0' + value : value;
   }
 }

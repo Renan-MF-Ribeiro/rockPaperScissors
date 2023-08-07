@@ -7,6 +7,7 @@ module.exports = {
       scoreText: "#2a46c0",
       white: "#FFF",
       darkText: "#3b4363",
+      red: "#e64040",
     },
     plugins: [],
   },

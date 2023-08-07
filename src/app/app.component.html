@@ -11,6 +11,7 @@
       *ngIf="!weaponSelected"
       class="w-full h-full flex"
     ></app-game>
+
     <app-player
       (back)="weaponSelected = $event"
       [weapon]="weaponSelected"
