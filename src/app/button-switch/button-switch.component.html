@@ -1,6 +1,6 @@
 <div class="customCheckBoxHolder">
-  <input type="checkbox" id="cCB1" class="customCheckBoxInput" />
-  <label for="cCB1" class="customCheckBoxWrapper">
+  <input type="checkbox" #cCB1 id="cCB1" class="customCheckBoxInput" />
+  <label for="cCB1" class="customCheckBoxWrapper" (click)="tbbt.emit(cCB1)">
     <div class="customCheckBox">
       <div class="inner">
         <mat-icon

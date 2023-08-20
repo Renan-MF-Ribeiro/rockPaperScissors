@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-rules',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rules.component.scss'],
 })
 export class RulesComponent implements OnInit {
-  constructor() {}
-  rule: string = '/assets/images/image-rules.svg';
+  constructor(@Inject(MAT_DIALOG_DATA) public tbbt: boolean) {}
+
+  rule: string = this.tbbt
+    ? '/assets/images/image-rules-bonus.svg'
+    : '/assets/images/image-rules.svg';
   ngOnInit(): void {}
 }

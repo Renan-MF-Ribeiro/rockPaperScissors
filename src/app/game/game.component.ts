@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-game',
@@ -7,6 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class GameComponent implements OnInit {
   @Output() select = new EventEmitter<string>();
+  @Input() tbbt: boolean = false;
   constructor() {}
 
   ngOnInit(): void {}

@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
-import { MatIconRegistry } from '@angular/material/icon';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-button-switch',
@@ -8,6 +6,7 @@ import { MatIconRegistry } from '@angular/material/icon';
   styleUrls: ['./button-switch.component.scss'],
 })
 export class ButtonSwitchComponent implements OnInit {
+  @Output() tbbt = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -12,7 +12,11 @@ import { RulesComponent } from './rules/rules.component';
 export class AppComponent {
   title = 'rockPaperScissors';
 
-  listNames = ['ROCK', 'PAPER', 'SCISSORS'];
+  tbbt: boolean = true;
+
+  listNames = this.tbbt
+    ? ['ROCK', 'PAPER', 'SCISSORS', 'LIZARD', 'SPOCK ']
+    : ['ROCK', 'PAPER', 'SCISSORS'];
 
   weaponSelected!: string;
   constructor(
@@ -30,11 +34,16 @@ export class AppComponent {
 
   openRules() {
     this.dialog.open(RulesComponent, {
-      data: {
-        animal: 'panda',
-      },
+      data: this.tbbt,
       width: '60%',
       maxHeight: '80%',
     });
+  }
+
+  changeOption() {
+    this.tbbt = !this.tbbt;
+    this.listNames = this.tbbt
+      ? ['ROCK', 'PAPER', 'SCISSORS', 'LIZARD', 'SPOCK ']
+      : ['ROCK', 'PAPER', 'SCISSORS'];
   }
 }

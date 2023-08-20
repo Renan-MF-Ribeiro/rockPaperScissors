@@ -72,14 +72,14 @@ export class PlayerComponent implements OnInit {
 
     setTimeout(() => {
       clearInterval(interval);
-      this.result = this.pedraPapelTesouraLagartoSpock(
+      this.result = this.stonePaperScissorsLizardSpock(
         this.weapon,
         this.weaponIA
       );
     }, 3000);
   }
 
-  pedraPapelTesouraLagartoSpock(player: string, IA: string): string {
+  stonePaperScissorsLizardSpock(player: string, IA: string): string {
     if (player === IA) {
       return 'Empate!';
     }

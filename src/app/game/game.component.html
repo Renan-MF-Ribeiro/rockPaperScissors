@@ -1,5 +1,7 @@
-<div class="flex w-full flex-col justify-between items-center md:px-[20%]">
-  <!-- <img class="absolute top-64" src="assets/images/bg-triangle.svg" alt="" /> -->
+<div
+  *ngIf="!tbbt"
+  class="flex w-full flex-col justify-between items-center md:px-[20%]"
+>
   <div class="box-options">
     <div class="line1">
       <app-weapon
@@ -7,17 +9,53 @@
         (click)="select.emit('paper')"
         selected="paper"
       ></app-weapon>
-      <!-- class="relative w-48 h-48 top-0 right-[30%] md:right-[18%] lg:right-[14%] xl:right-[10%]" -->
       <app-weapon
         class="w-[30%] md:w-[33%] lg:w-[40%] h-full md:h-full"
         (click)="select.emit('scissors')"
         selected="scissors"
       ></app-weapon>
-      <!-- class="relative w-48 h-48 lg:left-[14%] md:left-[18%] left-[30%] xl:left-[10%] max-[400px]:mt-[-50%] mt-[-45%] sm md:mt-[-25%] lg:mt-[-18%] xl:mt-[-14%]" -->
     </div>
     <div class="line2">
       <app-weapon
-        class="w-[30%] md:w-[33%] lg:w-[40%] h-[90%] md:h-full"
+        class="w-[30%] md:w-[33%] lg:w-[40%] h-full md:h-full"
+        (click)="select.emit('rock')"
+        selected="rock"
+      ></app-weapon>
+    </div>
+  </div>
+</div>
+<div
+  *ngIf="tbbt"
+  class="flex w-full flex-col justify-between items-center md:px-[20%]"
+>
+  <div class="box-options tbbt">
+    <div class="line1-tbbt">
+      <app-weapon
+        class="w-[30%] md:w-[33%] lg:w-[36%] h-full md:h-[120%]"
+        (click)="select.emit('scissors')"
+        selected="scissors"
+      ></app-weapon>
+    </div>
+    <div class="line2-tbbt">
+      <app-weapon
+        class="w-[30%] md:w-[33%] lg:w-[36%] h-full md:h-full"
+        (click)="select.emit('spock')"
+        selected="spock"
+      ></app-weapon>
+      <app-weapon
+        class="w-[30%] md:w-[33%] lg:w-[36%] h-full md:h-full"
+        (click)="select.emit('paper')"
+        selected="paper"
+      ></app-weapon>
+    </div>
+    <div class="line3-tbbt">
+      <app-weapon
+        class="w-[30%] md:w-[33%] lg:w-[36%] h-full md:h-full"
+        (click)="select.emit('lizard')"
+        selected="lizard"
+      ></app-weapon>
+      <app-weapon
+        class="w-[30%] md:w-[33%] lg:w-[36%] h-full md:h-full"
         (click)="select.emit('rock')"
         selected="rock"
       ></app-weapon>

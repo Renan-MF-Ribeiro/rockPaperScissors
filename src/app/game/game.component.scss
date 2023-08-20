@@ -6,8 +6,12 @@
     // margin: 50px;
     flex-direction: column;
     background-repeat: no-repeat;
-    background-size: 60%;
+    background-size: 90%;
     background-position: center;
+
+    @media screen and (min-width:500px) {
+        background-size: 60%;
+    }
 
     .line1 {
         height: 50%;
@@ -23,4 +27,36 @@
         justify-content: center;
         align-items: end;
     }
+}
+
+.tbbt {
+    background-image: url('/assets/images/bg-pentagon.svg');
+
+    @media screen and (min-width:500px) {
+        background-size: 80%;
+    }
+
+    .line1-tbbt {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .line2-tbbt {
+        height: 35%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    .line3-tbbt {
+        height: 35%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: end;
+    }
+
 }

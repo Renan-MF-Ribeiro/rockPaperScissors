@@ -1,5 +1,5 @@
 <section class="box flex flex-col h-full">
-  <div class="scored h-52">
+  <div class="scored h-1/2">
     <app-header
       class="w-full flex justify-center items-center"
       [listNames]="listNames"
@@ -7,6 +7,7 @@
   </div>
   <div class="game h-full">
     <app-game
+      [tbbt]="tbbt"
       (select)="weaponSelected = $event"
       *ngIf="!weaponSelected"
       class="w-full h-full flex"
@@ -20,7 +21,7 @@
     ></app-player>
   </div>
   <div class="flex flex-row justify-between items-center">
-    <app-button-switch class="m-3"></app-button-switch>
+    <app-button-switch class="m-3" (tbbt)="changeOption()"></app-button-switch>
     <button (click)="openRules()" class="rules">RULES</button>
   </div>
 </section>
