@@ -89,38 +89,38 @@ export class PlayerComponent implements OnInit {
       case 'rock':
         if (IA === 'scissors' || IA === 'lizard') {
           this._gameService.updateVictories();
-          return 'Você venceu!';
+          return 'You Win!';
         } else {
-          return 'Você perdeu!';
+          return 'You Lose!';
         }
       case 'paper':
         if (IA === 'rock' || IA === 'spock') {
           this._gameService.updateVictories();
-          return 'Você venceu!';
+          return 'You Win!';
         } else {
-          return 'Você perdeu!';
+          return 'You Lose!';
         }
       case 'scissors':
         if (IA === 'paper' || IA === 'lizard') {
           this._gameService.updateVictories();
-          return 'Você venceu!';
+          return 'You Win!';
         } else {
-          return 'Você perdeu!';
+          return 'You Lose!';
         }
       case 'lizard':
         if (IA === 'paper' || IA === 'spock') {
           this._gameService.updateVictories();
-          return 'Você venceu!';
+          return 'You Win!';
         } else {
-          return 'Você perdeu!';
+          return 'You Lose!';
         }
       case 'spock':
         if (IA === 'rock' || IA === 'scissors') {
           this._gameService.updateVictories();
-          return 'Você venceu!';
+          return 'You Win!';
         }
         {
-          return 'Você perdeu!';
+          return 'You Lose!';
         }
       default:
         return 'Erro na jogada.';

@@ -25,7 +25,7 @@
         class="bg-white text-red rounded-xl leading-[1] text-[3vw] p-3 max-w-[300px]"
         (click)="back.emit()"
       >
-        Jogar Novamente
+        PLAY AGAIN
       </button>
     </div>
     <div class="flex flex-col items-center w-full h-full">
@@ -57,9 +57,7 @@
       ></app-weapon>
       <P>YOUR PICKED</P>
     </div>
-    <div *ngIf="result" class="flex justify-center items-center max-w-[150px]">
-      <p class="text-white text-[300%] leading-[1] text-center">{{ result }}</p>
-    </div>
+
     <div class="flex flex-col">
       <app-weapon
         *ngIf="result"
@@ -74,12 +72,18 @@
       <P>THE HOUSE PICKED</P>
     </div>
   </div>
-  <div class="flex w-full p-5" *ngIf="currentScreenSize == 'XSmall' && result">
+  <div
+    class="flex flex-col w-full p-5"
+    *ngIf="currentScreenSize == 'XSmall' && result"
+  >
+    <div class="flex justify-center items-center">
+      <p class="result text-white leading-[1] text-center">{{ result }}</p>
+    </div>
     <button
       class="bg-white w-full text-red rounded-xl leading-[1] text-[200%] p-3 flex justify-center items-center"
       (click)="back.emit()"
     >
-      Jogar Novamente
+      PLAY AGAIN
     </button>
   </div>
 </div>
