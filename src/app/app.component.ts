@@ -41,7 +41,7 @@ export class AppComponent {
   openRules() {
     this.dialog.open(RulesComponent, {
       data: this.tbbt,
-      width: '60%',
+      maxWidth: '60%',
       maxHeight: '80%',
     });
   }
