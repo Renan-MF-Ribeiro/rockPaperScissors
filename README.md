@@ -69,7 +69,7 @@ As a focus of continuous development, I intend to increase my knowledge in creat
 
 - Website - [Renan Ribeiro](https://renan-ribeiro.web.app)
 - GitHub - [Renan Ribeiro](https://github.com/Renan-MF-Ribeiro)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Renan-MF-Ribeiro)
+- Frontend Mentor - [@Renan-MF-Ribeiro](https://www.frontendmentor.io/profile/Renan-MF-Ribeiro)
 
 ## Acknowledgments
 
