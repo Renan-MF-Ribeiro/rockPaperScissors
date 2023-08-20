@@ -1,27 +1,76 @@
-# RockPaperScissors
+# Frontend Mentor - Rock, Paper, Scissors solution
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Development server
+## Table of contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Code scaffolding
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Overview
 
-## Build
+### The challenge
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Users should be able to:
 
-## Running unit tests
+- View the optimal layout for the game depending on their device's screen size
+- Play Rock, Paper, Scissors against the computer
+- Maintain the state of the score after refreshing the browser
+- **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Screenshot
 
-## Running end-to-end tests
+![Screenshot](./screenshot.)png
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Links
 
-## Further help
+- Solution URL: [Git Repositorie](https://github.com/Renan-MF-Ribeiro/rockPaperScissors)
+- Live Site URL: [Vercel App](https://rock-paper-scissors-lizard-spock-liard.vercel.app/)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- SCSS custom properties
+- Mobile-first workflow
+- [Angular](https://angular.io/) - Framework
+- [Styled Preprocessors](https://tailwindcss.com/) - For styles
+
+### What I learned
+
+What I learned from this challenge mainly was responsive layout and adjustment based on the breakpoint of mobile, tablet, notebook and desktop screens.
+
+```css
+.bg-size {
+  background-size: 90%;
+
+  @media screen and (min-width: 500px) {
+    background-size: 80%;
+  }
+}
+```
+
+### Continued development
+
+As a focus of continuous development, I intend to increase my knowledge in creating and publishing Angular libraries of specific components that facilitate and speed up application development.
+
+## Author
+
+- Website - [Renan Ribeiro](https://renan-ribeiro.web.app)
+- GitHub - [Renan Ribeiro](https://github.com/Renan-MF-Ribeiro)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Renan-MF-Ribeiro)
+
+## Acknowledgments
+
+I first thank God, I also greatly thank my wife and son who saw this first and had great importance in my development and growth and a lot of patience for the time dedicated.
