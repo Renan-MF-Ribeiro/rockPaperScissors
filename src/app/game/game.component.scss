@@ -1,0 +1,26 @@
+.box-options {
+    background-image: url('/assets/images/bg-triangle.svg');
+    display: flex;
+    width: 100%;
+    height: 100%;
+    // margin: 50px;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+
+    .line1 {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .line2 {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+}

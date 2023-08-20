@@ -1,7 +1,85 @@
-<div class="flex flex-col justify-center w-full">
-  <div class="flex w-full px-32 flex-row justify-around items-center">
-    <app-weapon class="relative w-60 h-60 l" [selected]="weapon"></app-weapon>
-    <app-result [result]="result" (back)="back.emit()"></app-result>
-    <app-weapon class="relative w-60 h-60" [selected]="weaponIA"></app-weapon>
+<div
+  class="flex flex-col justify-center w-full md:h-[70%] lg:h-[90%] xl:h-[90%]"
+>
+  <div
+    *ngIf="currentScreenSize !== 'XSmall'"
+    class="flex w-full h-full flex-row justify-around items-center"
+  >
+    <div class="flex flex-col">
+      <app-weapon
+        [class]="
+          result
+            ? 'md:w-60 md:h-60 lg:h-80 lg:w-80 xl:h-[100%] xl:w-[100%]'
+            : 'md:w-60 md:h-60 lg:h-[90%] xl:h-full lg:w-[40%]'
+        "
+        [selected]="weapon"
+      ></app-weapon>
+      <p>YOUR PICKED</p>
+    </div>
+    <div
+      *ngIf="result"
+      class="flex flex-col justify-center p-3 items-center w-[30%]"
+    >
+      <p class="text-white text-[5vw] text-center leading-[1]">{{ result }}</p>
+      <button
+        class="bg-white text-red rounded-xl leading-[1] text-[3vw] p-3 max-w-[300px]"
+        (click)="back.emit()"
+      >
+        Jogar Novamente
+      </button>
+    </div>
+    <div class="flex flex-col">
+      <app-weapon
+        [class]="
+          result
+            ? 'md:w-60 md:h-60 lg:h-80 lg:w-80 xl:h-[100%] xl:w-[100%]'
+            : 'md:w-60 md:h-60 lg:h-[90%] xl:h-full lg:w-[40%]'
+        "
+        [selected]="weaponIA"
+      ></app-weapon>
+      <P>THE HOUSE PICKED</P>
+    </div>
+  </div>
+  <div
+    *ngIf="currentScreenSize == 'XSmall'"
+    class="flex flex-row w-full md:invisible lg:px-32 justify-around items-center"
+  >
+    <div class="flex flex-col">
+      <app-weapon
+        *ngIf="result"
+        class="relative w-28 h-28"
+        [selected]="weapon"
+      ></app-weapon>
+      <app-weapon
+        *ngIf="!result"
+        class="relative w-48 h-48"
+        [selected]="weapon"
+      ></app-weapon>
+      <P>YOUR PICKED</P>
+    </div>
+    <div *ngIf="result" class="flex justify-center items-center max-w-[150px]">
+      <p class="text-white text-[300%] leading-[1] text-center">{{ result }}</p>
+    </div>
+    <div class="flex flex-col">
+      <app-weapon
+        *ngIf="result"
+        class="relative w-28 h-28"
+        [selected]="weaponIA"
+      ></app-weapon>
+      <app-weapon
+        *ngIf="!result"
+        class="relative w-48 h-48"
+        [selected]="weaponIA"
+      ></app-weapon>
+      <P>THE HOUSE PICKED</P>
+    </div>
+  </div>
+  <div class="flex w-full p-5" *ngIf="currentScreenSize == 'XSmall' && result">
+    <button
+      class="bg-white w-full text-red rounded-xl leading-[1] text-[200%] p-3 flex justify-center items-center"
+      (click)="back.emit()"
+    >
+      Jogar Novamente
+    </button>
   </div>
 </div>

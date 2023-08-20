@@ -1,0 +1,19 @@
+::ng-deep.mat-dialog-container {
+    background-color: #FFF;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 5vw;
+    justify-content: center;
+    margin: 20px 0;
+    line-height: 1;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { GameService } from '../services/game-services.service';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-player',
@@ -14,7 +16,44 @@ export class PlayerComponent implements OnInit {
   previousWeaponIA!: string;
   weapons = ['rock', 'paper', 'scissors'];
 
-  constructor(private _gameService: GameService) {}
+  destroyed = new Subject<void>();
+  currentScreenSize!: string;
+
+  displayNameMap = new Map([
+    [Breakpoints.XSmall, 'XSmall'],
+    [Breakpoints.Small, 'Small'],
+    [Breakpoints.Medium, 'Medium'],
+    [Breakpoints.Large, 'Large'],
+    [Breakpoints.XLarge, 'XLarge'],
+  ]);
+
+  constructor(
+    private _gameService: GameService,
+    breakpointObserver: BreakpointObserver
+  ) {
+    breakpointObserver
+      .observe([
+        Breakpoints.XSmall,
+        Breakpoints.Small,
+        Breakpoints.Medium,
+        Breakpoints.Large,
+        Breakpoints.XLarge,
+      ])
+      .pipe(takeUntil(this.destroyed))
+      .subscribe((result) => {
+        for (const query of Object.keys(result.breakpoints)) {
+          if (result.breakpoints[query]) {
+            this.currentScreenSize =
+              this.displayNameMap.get(query) ?? 'Unknown';
+          }
+        }
+      });
+  }
+
+  ngOnDestroy() {
+    this.destroyed.next();
+    this.destroyed.complete();
+  }
 
   ngOnInit(): void {
     this.selectIA();

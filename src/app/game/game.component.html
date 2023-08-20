@@ -1,19 +1,26 @@
-<div class="flex w-full flex-col justify-between items-center">
-  <img class="absolute top-64" src="assets/images/bg-triangle.svg" alt="" />
-
-  <app-weapon
-    (click)="select.emit('paper')"
-    class="relative w-32 h-32 top-0 right-[30%] md:right-[18%] lg:right-[14%] xl:right-[10%]"
-    selected="paper"
-  ></app-weapon>
-  <app-weapon
-    (click)="select.emit('scissors')"
-    class="relative w-32 h-32 top-[-33%] lg:left-[14%] md:left-[18%] left-[30%] xl:left-[10%] xl:top-[-36%]"
-    selected="scissors"
-  ></app-weapon>
-  <app-weapon
-    (click)="select.emit('rock')"
-    class="relative w-32 h-32 top-[-10%]"
-    selected="rock"
-  ></app-weapon>
+<div class="flex w-full flex-col justify-between items-center md:px-[20%]">
+  <!-- <img class="absolute top-64" src="assets/images/bg-triangle.svg" alt="" /> -->
+  <div class="box-options">
+    <div class="line1">
+      <app-weapon
+        class="w-[30%] md:w-[33%] lg:w-[40%] h-full md:h-full"
+        (click)="select.emit('paper')"
+        selected="paper"
+      ></app-weapon>
+      <!-- class="relative w-48 h-48 top-0 right-[30%] md:right-[18%] lg:right-[14%] xl:right-[10%]" -->
+      <app-weapon
+        class="w-[30%] md:w-[33%] lg:w-[40%] h-full md:h-full"
+        (click)="select.emit('scissors')"
+        selected="scissors"
+      ></app-weapon>
+      <!-- class="relative w-48 h-48 lg:left-[14%] md:left-[18%] left-[30%] xl:left-[10%] max-[400px]:mt-[-50%] mt-[-45%] sm md:mt-[-25%] lg:mt-[-18%] xl:mt-[-14%]" -->
+    </div>
+    <div class="line2">
+      <app-weapon
+        class="w-[30%] md:w-[33%] lg:w-[40%] h-[90%] md:h-full"
+        (click)="select.emit('rock')"
+        selected="rock"
+      ></app-weapon>
+    </div>
+  </div>
 </div>

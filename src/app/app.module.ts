@@ -9,8 +9,12 @@ import { WeaponComponent } from './game/weapon/weapon.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRippleModule } from '@angular/material/core';
 import { PlayerComponent } from './player/player.component';
-import { ResultComponent } from './result/result.component';
 import { RulesComponent } from './rules/rules.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { ButtonSwitchComponent } from './button-switch/button-switch.component';
+import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -20,10 +24,18 @@ import { RulesComponent } from './rules/rules.component';
     GameComponent,
     WeaponComponent,
     PlayerComponent,
-    ResultComponent,
     RulesComponent,
+    ButtonSwitchComponent,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, MatRippleModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatRippleModule,
+    LayoutModule,
+    MatIconModule,
+    MatDialogModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

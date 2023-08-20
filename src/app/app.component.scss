@@ -1,7 +1,20 @@
 .box {
     background: rgb(27, 42, 75);
     background: radial-gradient(circle, rgba(27, 42, 75, 1) 0%, #182343 100%);
-    height: 100%;
     width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
 
+}
+
+.rules {
+    background: TRANSPARENT;
+    color: #FFF;
+    border: solid 1px;
+    border-radius: 8px;
+    padding: 4px 26px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-right: 10px;
 }
