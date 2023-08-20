@@ -1,7 +1,7 @@
 import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, Title } from '@angular/platform-browser';
 import { RulesComponent } from './rules/rules.component';
 
 @Component({
@@ -10,19 +10,23 @@ import { RulesComponent } from './rules/rules.component';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'rockPaperScissors';
+  tbbt: boolean = false;
 
-  tbbt: boolean = true;
+  tbbtWapons: string[] = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+  commonWapons: string[] = ['rock', 'paper', 'scissors'];
 
-  listNames = this.tbbt
-    ? ['ROCK', 'PAPER', 'SCISSORS', 'LIZARD', 'SPOCK ']
-    : ['ROCK', 'PAPER', 'SCISSORS'];
+  listWeapons = this.tbbt ? this.tbbtWapons : this.commonWapons;
+
+  title = this.tbbt
+    ? 'Rock Paper Scissors Lizard Spock'
+    : 'Rock Paper Scissors';
 
   weaponSelected!: string;
   constructor(
     private _matIconRegistry: MatIconRegistry,
     private _domSanatizer: DomSanitizer,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private _titleService: Title
   ) {
     this._matIconRegistry.addSvgIcon(
       'tbbt',
@@ -30,6 +34,8 @@ export class AppComponent {
         '../assets/icon/tbbt.svg'
       )
     );
+
+    this._titleService.setTitle('Rock Paper Scissors');
   }
 
   openRules() {
@@ -42,8 +48,9 @@ export class AppComponent {
 
   changeOption() {
     this.tbbt = !this.tbbt;
-    this.listNames = this.tbbt
-      ? ['ROCK', 'PAPER', 'SCISSORS', 'LIZARD', 'SPOCK ']
-      : ['ROCK', 'PAPER', 'SCISSORS'];
+    this.listWeapons = this.tbbt ? this.tbbtWapons : this.commonWapons;
+    this._titleService.setTitle(
+      this.tbbt ? 'Rock Paper Scissors Lizard Spock' : 'Rock Paper Scissors'
+    );
   }
 }

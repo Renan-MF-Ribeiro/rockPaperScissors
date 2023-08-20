@@ -6,7 +6,7 @@
     // margin: 50px;
     flex-direction: column;
     background-repeat: no-repeat;
-    background-size: 90%;
+    background-size: 60%;
     background-position: center;
 
     @media screen and (min-width:500px) {
@@ -29,12 +29,17 @@
     }
 }
 
-.tbbt {
-    background-image: url('/assets/images/bg-pentagon.svg');
+.bg-size {
+    background-size: 90%;
 
     @media screen and (min-width:500px) {
         background-size: 80%;
     }
+}
+
+.tbbt {
+
+    background-image: url('/assets/images/bg-pentagon.svg');
 
     .line1-tbbt {
         height: 30%;

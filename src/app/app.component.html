@@ -2,7 +2,7 @@
   <div class="scored h-1/2">
     <app-header
       class="w-full flex justify-center items-center"
-      [listNames]="listNames"
+      [listWeapons]="listWeapons"
     ></app-header>
   </div>
   <div class="game h-full">
@@ -16,6 +16,7 @@
     <app-player
       (back)="weaponSelected = $event"
       [weapon]="weaponSelected"
+      [weapons]="listWeapons"
       *ngIf="weaponSelected"
       class="w-full h-full flex"
     ></app-player>

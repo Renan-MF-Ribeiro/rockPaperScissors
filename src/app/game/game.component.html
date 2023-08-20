@@ -1,23 +1,23 @@
 <div
   *ngIf="!tbbt"
-  class="flex w-full flex-col justify-between items-center md:px-[20%]"
+  class="flex w-full flex-col justify-between items-center md:px-[28%] lg:px-[20%] xl:px-[32%]"
 >
   <div class="box-options">
     <div class="line1">
       <app-weapon
-        class="w-[30%] md:w-[33%] lg:w-[40%] h-full md:h-full"
+        class="w-[140px] h-[140px] md:w-[110px] md:h-[110px] lg:w-[170px] lg:h-[170px]"
         (click)="select.emit('paper')"
         selected="paper"
       ></app-weapon>
       <app-weapon
-        class="w-[30%] md:w-[33%] lg:w-[40%] h-full md:h-full"
+        class="w-[140px] h-[140px] md:w-[110px] md:h-[110px] lg:w-[170px] lg:h-[170px]"
         (click)="select.emit('scissors')"
         selected="scissors"
       ></app-weapon>
     </div>
     <div class="line2">
       <app-weapon
-        class="w-[30%] md:w-[33%] lg:w-[40%] h-full md:h-full"
+        class="w-[140px] h-[140px] md:w-[110px] md:h-[110px] lg:w-[170px] lg:h-[170px]"
         (click)="select.emit('rock')"
         selected="rock"
       ></app-weapon>
@@ -26,36 +26,36 @@
 </div>
 <div
   *ngIf="tbbt"
-  class="flex w-full flex-col justify-between items-center md:px-[20%]"
+  class="flex w-full flex-col justify-between items-center md:px-[28%] lg:px-[20%] xl:px-[32%]"
 >
-  <div class="box-options tbbt">
+  <div [ngClass]="{ 'bg-size': tbbt }" class="box-options tbbt">
     <div class="line1-tbbt">
       <app-weapon
-        class="w-[30%] md:w-[33%] lg:w-[36%] h-full md:h-[120%]"
+        class="w-[140px] h-[140px] md:w-[110px] md:h-[110px] lg:w-[170px] lg:h-[170px]"
         (click)="select.emit('scissors')"
         selected="scissors"
       ></app-weapon>
     </div>
     <div class="line2-tbbt">
       <app-weapon
-        class="w-[30%] md:w-[33%] lg:w-[36%] h-full md:h-full"
+        class="w-[140px] h-[140px] md:w-[110px] md:h-[110px] lg:w-[170px] lg:h-[170px]"
         (click)="select.emit('spock')"
         selected="spock"
       ></app-weapon>
       <app-weapon
-        class="w-[30%] md:w-[33%] lg:w-[36%] h-full md:h-full"
+        class="w-[140px] h-[140px] md:w-[110px] md:h-[110px] lg:w-[170px] lg:h-[170px]"
         (click)="select.emit('paper')"
         selected="paper"
       ></app-weapon>
     </div>
     <div class="line3-tbbt">
       <app-weapon
-        class="w-[30%] md:w-[33%] lg:w-[36%] h-full md:h-full"
+        class="w-[140px] h-[140px] md:w-[110px] md:h-[110px] lg:w-[170px] lg:h-[170px]"
         (click)="select.emit('lizard')"
         selected="lizard"
       ></app-weapon>
       <app-weapon
-        class="w-[30%] md:w-[33%] lg:w-[36%] h-full md:h-full"
+        class="w-[140px] h-[140px] md:w-[110px] md:h-[110px] lg:w-[170px] lg:h-[170px]"
         (click)="select.emit('rock')"
         selected="rock"
       ></app-weapon>

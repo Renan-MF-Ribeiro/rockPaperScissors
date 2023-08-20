@@ -12,7 +12,7 @@ import {
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Input() listNames!: string[];
+  @Input() listWeapons!: string[];
   constructor() {}
 
   ngOnInit(): void {}

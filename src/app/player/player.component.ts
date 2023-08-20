@@ -14,7 +14,7 @@ export class PlayerComponent implements OnInit {
   weaponIA!: string;
   result!: string;
   previousWeaponIA!: string;
-  weapons = ['rock', 'paper', 'scissors'];
+  @Input() weapons!: string[];
 
   destroyed = new Subject<void>();
   currentScreenSize!: string;
@@ -63,7 +63,8 @@ export class PlayerComponent implements OnInit {
     const interval = setInterval(() => {
       let newWeaponIA;
       do {
-        newWeaponIA = this.weapons[Math.floor(Math.random() * 3)];
+        newWeaponIA =
+          this.weapons[Math.floor(Math.random() * this.weapons.length)];
       } while (newWeaponIA === this.previousWeaponIA);
 
       this.weaponIA = newWeaponIA;
