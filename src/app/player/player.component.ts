@@ -82,7 +82,7 @@ export class PlayerComponent implements OnInit {
 
   stonePaperScissorsLizardSpock(player: string, IA: string): string {
     if (player === IA) {
-      return 'Empate!';
+      return 'DRAW!';
     }
 
     switch (player) {
